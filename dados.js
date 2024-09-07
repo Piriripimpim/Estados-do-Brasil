@@ -248,5 +248,3 @@ const bandeiras = [
     { nome: 'sergipe', img: 'imagem/Bandeiras/sergipe.png' },
     { nome: 'tocantins', img: 'imagem/Bandeiras/tocantins.png' }
 ];
-
-const fundoDesfocado = document.querySelector('.fundo-desfocado');

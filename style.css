@@ -6,6 +6,7 @@
     justify-content: center;
 }
 
+/*Ajustar as silhuetas do estado*/
 .mapa {
     display: flex;
     justify-content: center;
@@ -13,22 +14,26 @@
     width: 40%;
 }
 
+
+/*Estilizar o botão de mudar imagem*/
 .btBandeira {
+    width: 10rem; /* Largura dos inputs */
     padding: 0.8rem 0.8rem; /* Espaçamento interno do botão */
     border: none; 
     border-radius: 1.5rem; /* Borda arredondada */
     background-color: #ffffff; /* Cor de fundo do botão */
     color: #000000; /* Cor do texto do botão */
-    font-size: 0.8rem; /* Tamanho da fonte */
+    font-size: 1.1rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
+/*Estiza o botão quando mouse passa em cima*/
 .btBandeira:hover {
     scale: 1.1; 
     border-radius: 1.5rem; /* Borda arredondada */
     background-color: #f6fb5e; /* Cor de fundo do botão */
     color: #000000; /* Cor do texto do botão */
-    font-size: 0.8rem; /* Tamanho da fonte */
+    font-size: 1.1rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
@@ -47,6 +52,7 @@ body {
     padding: 0; /* Remove o padding padrão */
 }
 
+/*Estiliza as imagem de bandeira de fundo*/
 .fundo-desfocado {
     background-image: url("imagem/Bandeiras/istockphoto-176430982-612x612.jpg");
     background-size: cover;
@@ -60,7 +66,7 @@ body {
     z-index: -2; 
   }
   
-  
+/*Estiliza o header*/  
 header {
     display: flex;
     flex-direction: column;
@@ -74,13 +80,14 @@ h1 {
     letter-spacing: 0.4rem;
     margin-bottom: 0;
 }
-
+/*Estilizar h1 quando mouse passa em cima*/
 h1:hover {
     scale: 1.1;
     color: #038026;
     text-overflow: ellipsis;
 }
 
+/*Estiliza o paragrafo do cabeçalho*/
 header p {
     margin-top: 0;
 }
@@ -95,7 +102,7 @@ section {
 
 /* Estiliza os inputs dentro das seções */
 section input {
-    width: 30rem; /* Largura dos inputs */
+    width: 35rem; /* Largura dos inputs */
     border-width: 2px;
     padding: 1rem; /* Espaçamento interno */
     border-radius: 1.5rem; /* Borda arredondada */
@@ -103,22 +110,24 @@ section input {
     background-color: #ffffff;
     border-color: #000000;
     color: #303235; /* Cor do texto */
-    font-size: 1.5rem; /* Tamanho da fonte */
+    font-size: 1.2rem; /* Tamanho da fonte */
     box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
 /* Estiliza os botões dentro das seções */
 .BOTÃO {
+    width: 15rem; /* Largura dos inputs */
     padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
     border: none; 
     border-radius: 1.5rem; /* Borda arredondada */
     background-color: #ffffff; /* Cor de fundo do botão */
     color: #000000; /* Cor do texto do botão */
-    font-size: 1.4rem; /* Tamanho da fonte */
+    font-size: 1.5rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
-/* Adiciona efeito hover ao botão de pesquisa */
+
+/*Estiliza o botão quando o mouse passa em cima*/ 
 .BOTÃO:hover {
     background-color: #0777e7;
     transform: scale(1.1);
@@ -148,6 +157,7 @@ section input {
     display: inline-block;
 }
 
+/*Aplica um fundo branco desfocado em cada item*/
 .item-resultado::before {
     content: "";
     position: absolute;
@@ -156,13 +166,14 @@ section input {
     width: 100%;
     height: 100%;
     background-color: #F5F7F8;
-    opacity: 50%; /* Ajuste a opacidade conforme necessário */
+    opacity: 80%; /* Ajuste a opacidade conforme necessário */
     filter: blur(10px);
     z-index: -1; /* Garante que o fundo fique atrás do texto */
     border-radius: inherit; /* Herda o raio da borda do elemento pai */
    
   }
 
+/*Estila o botão do saiba mais de cada item*/
   .item-resultado button {
     padding: 0.8rem 1.2rem; 
     border: none;
@@ -179,12 +190,15 @@ section input {
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
+
 /* Estiliza os títulos dentro dos itens de resultado */
 .item-resultado h2 {
     text-align: center;
     font-size: 1.8rem; 
     color: #222831; 
 }
+
+/* Estiliza o titulo quando o mouse passa em cima dele*/
 .item-resultado h2:hover{
 text-decoration: underline;
     transform: scale(1.4);
@@ -197,11 +211,13 @@ text-decoration: underline;
     color: #30475E; 
 }
 
+/* Aplica o efeito na imagem do estado de cada item, deixando todo preto */
 .item-resultado img {
    filter: brightness(0%);
    transition: filter 0.5s ease-in-out;
 }
 
+/* Retorna as cores da imagem */
 .item-resultado img:hover {
     filter: brightness(100%);
  }
@@ -230,6 +246,7 @@ footer {
     font-size: 1rem; 
 }
 
+/* aplica um fundo branco no rodapé */
 footer :before {
         content: "";
         display: block;

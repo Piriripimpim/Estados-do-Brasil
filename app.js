@@ -1,4 +1,5 @@
 let indice = -1
+// Função para mudar o fundo
 function mudarfundo() {
 
     // Seleciona o elemento que terá o fundo alterado (neste caso, o corpo)
@@ -32,9 +33,9 @@ document.addEventListener('keydown', function(event) {
 // função de pesquisa
 function pesquisar() {
 
-  let roberto = document.getElementById("resultados-pesquisa")
+  let resultado = document.getElementById("resultados-pesquisa")
 
-  let mario = document.getElementById("pesquissar").value
+  let campoPesquisa = document.getElementById("pesquissar").value
 
   let results = ""
   let descricao = ""
@@ -42,19 +43,20 @@ function pesquisar() {
   let tag = ""
 
 
-if (mario == ""){
-    roberto.innerHTML = "Por favor digite o nome de algum estado ou região que ele se encontra";
+if (campoPesquisa == ""){
+  resultado.innerHTML = "Por favor digite o nome de algum estado ou região que ele se encontra";
     return
 }
 
-mario = mario.toLowerCase()
+campoPesquisa = campoPesquisa.toLowerCase()
 
     for (let estado of dados) {
-     descricao = estado.descricão.toLowerCase()
-     titulo = estado.titulo.toLowerCase()
-    tag = estado.tag.toLowerCase()
-    if (estado.titulo.includes(mario) || estado.descricão.includes(mario) || estado.tag.includes(mario)) {
-    results += `<div class="item-resultado"> 
+      descricao = estado.descricão.toLowerCase()
+      titulo = estado.titulo.toLowerCase()
+      tag = estado.tag.toLowerCase()
+      // estrutura if que indentica se o que foi pesquisado e filtra o resultado
+      if (estado.titulo.includes(campoPesquisa) || estado.descricão.includes(campoPesquisa) || estado.tag.includes(campoPesquisa)) {
+          results += `<div class="item-resultado"> 
                  <div class="container">
                     <img src= "${estado.mapa}" alt= ${estado.alt}  class="mapa">
                 </div>
@@ -74,9 +76,10 @@ mario = mario.toLowerCase()
             }
   
   if (!results) {
-    roberto.innerHTML = "Resultado não encontrado, veja se está digitado corrta"
+    resultado.innerHTML = "Resultado não encontrado. Veja se está digitado corretamente"
+    return
   }
 
-  roberto.innerHTML = results;
+  resultado.innerHTML = results;
 
 }
