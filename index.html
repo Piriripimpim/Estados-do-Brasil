@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estados brasileiros</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon2.ico" type="image/x-icon">
+ </head>
+<body>
+    <header>
+        <section>
+            <H1>Estados do Brasil</H1>
+            <p><em>Digite o nome do estado que deseja conhecer mais sobre</em></p>
+        </section>
+    </header>
+   
+    <main>
+        <div class="container"><img src="imagem/brasilestados.png" alt="mapa do Brasil"  class="mapa"></div>
+        <section>
+            <input type="text" placeholder="Digite o nome do estado" id="pesquissar">
+            <button class="BOTÃO" onclick="pesquisar()"">Pesquisar </button>
+        </section>
+       
+        <section>
+            <button class="btBandeira" onclick="mudarfundo()">Mudar bandeira <br> de fundo</button>
+        </section>
+        
+        <section class="resultados-pesquisa" id="resultados-pesquisa"> 
+          
+            <div class="item-resultado">
+            </div>
+        </section>
+        >
+
+        <div class="fundo-desfocado" id="fundoDesfocado"> </div>
+    </main>
+    <footer>
+        <p class="textor">&copy 2024 - Estados brasileiros. Todos direitos reservados.</p>
+    </footer>
+
+    <script src="dados.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
